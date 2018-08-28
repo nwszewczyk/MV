@@ -1,0 +1,350 @@
+@charset "UTF-8";
+.form__checkbox:focus + .form__label .form__checkbox-custom, :focus {
+  border: 1px solid #78B53F;
+  box-shadow: 0px 0px 3px #78B53F;
+  outline: none;
+}
+
+/* BASE */
+html {
+  box-sizing: border-box;
+  color: #333333;
+  font: 18px/1.4 "Lato", "Arial";
+  min-height: 100%;
+}
+
+a {
+  color: #333333;
+}
+
+a:active,
+a:visited {
+  color: #f44242;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background: #f44242;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: #f44242;
+  color: #FFFFFF;
+}
+
+/* COPY */
+.header__logo {
+  width: 70px;
+}
+
+.nav {
+  padding: 0 0 15px 0;
+}
+
+.copy {
+  color: #FFFFFF;
+  position: relative;
+  text-align: center;
+}
+
+.copy__header {
+  padding: 15px 0;
+}
+
+.copy__header_pop {
+  font-size: 400%;
+  font-weight: 900;
+  text-shadow: 5px 5px 0px #f44242;
+  text-transform: uppercase;
+}
+
+.copy__header_h2 {
+  font-size: 190%;
+}
+
+.copy__text_handwritten {
+  font: normal 170%/1 "Gloria Hallelujah";
+}
+
+.feature-list {
+  margin: 0 0 0 auto;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.feature-list__item {
+  display: inline-block;
+  font-size: 150%;
+  padding: 5px 50px;
+}
+.feature-list__item:before {
+  background: #f44242;
+  border-radius: 50%;
+  display: block;
+  font: 900 200%/1 "Font Awesome 5 Free";
+  height: 145px;
+  line-height: 145px;
+  margin: 15px 0;
+  text-align: center;
+  width: 145px;
+}
+
+.feature-list__item_weight:before {
+  content: "";
+}
+
+.feature-list__item_dumbell:before {
+  content: "";
+}
+
+/* FORM */
+.form {
+  background-color: #FFFFFF;
+  margin: 5% 0;
+  padding: 55px 25px;
+}
+
+.form__header {
+  font-size: 170%;
+  margin: 0px 0 30px 0;
+  text-align: center;
+}
+
+.form__row {
+  clear: both;
+  float: none;
+  padding: 10px 0;
+}
+
+.form__text-input {
+  border: 1px solid #BBBBBB;
+  font: 300 100%/1 "Lato";
+  height: 50px;
+  margin: 10px 0 0 0;
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.form__checkbox:checked + .form__label .form__checkbox-custom:after {
+  background: #78B53F;
+  content: " ";
+  display: block;
+  height: 14px;
+  left: 2px;
+  position: relative;
+  top: 2px;
+  width: 14px;
+}
+
+.form__checkbox--hidden {
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.form__checkbox--focused {
+  border: 1px solid #78B53F;
+  box-shadow: 0 0 3px #78B53F;
+  outline: none;
+}
+
+.form__checkbox-custom {
+  border: 1px solid #333333;
+  display: inline-block;
+  float: left;
+  height: 20px;
+  margin: 0 10px 10px 0;
+  width: 20px;
+}
+
+.form__label {
+  font-size: 130%;
+  font-weight: 300;
+}
+
+.form__label-small {
+  font-size: 90%;
+}
+
+.form__required {
+  color: #f44242;
+  font-size: 75%;
+}
+
+.form__button {
+  background: #f44242;
+  border: none;
+  color: #FFFFFF;
+  font: 400 200%/1 "Lato";
+  height: 60px;
+  margin: 45px 0 0 0;
+  width: 100%;
+}
+
+/* FOOTER */
+/* MOBILE & TABLETS */
+@media only screen and (max-width: 1024px) {
+  /* COPY */
+  .copy {
+    background: top left/cover no-repeat url("../img/smoothieBackgroundMobile.jpg");
+    padding: 5% 0 170px 0;
+  }
+
+  .main {
+    display: block;
+  }
+
+  .copy__text_handwritten {
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    position: absolute;
+    bottom: 70px;
+    right: 5%;
+  }
+  .copy__text_handwritten:before {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background: 95% bottom no-repeat url(../img/arrow.png);
+    bottom: -50%;
+    content: " ";
+    display: block;
+    height: 97px;
+    position: absolute;
+    right: 50%;
+    width: 150px;
+  }
+
+  .feature-list {
+    /*margin: 0 0 6% auto;*/
+  }
+
+  /* FORM*/
+  .form {
+    margin: 5% auto;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* BASE */
+  html {
+    font-size: 16px;
+  }
+
+  /* COPY */
+  .feature-list__item {
+    padding: 5px 30px;
+  }
+  .feature-list__item:before {
+    height: 125px;
+    line-height: 125px;
+    width: 125px;
+  }
+
+  /* FORM*/
+  .form {
+    margin: 5% auto;
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  /* BASE */
+  html {
+    font-size: 14px;
+  }
+}
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+  /* BASICS */
+  body {
+    background: top left/cover no-repeat url("../img/smoothieBackground.jpg");
+  }
+
+  /* COPY */
+  .main {
+    display: flex;
+  }
+
+  .copy {
+    background: 95% bottom no-repeat url(../img/arrow.png);
+    flex-grow: 2;
+    padding: 8% 0 0 25%;
+  }
+
+  .copy__text {
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    bottom: 15px;
+    position: absolute;
+    right: 175px;
+  }
+
+  .copy__header_pop br,
+.copy__header_h2 br {
+    display: none;
+  }
+
+  /* FORM */
+  .form {
+    background-color: #FFFFFF;
+    flex-basis: 435px;
+    margin: 5% 0;
+    padding: 55px 25px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  /* BASE */
+  html {
+    font-size: 16px;
+  }
+
+  .copy__header_pop br,
+.copy__header_h2 br {
+    display: inherit;
+  }
+
+  /* COPY */
+  .copy {
+    padding: 6% 0 8% 25%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  /* BASE */
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    background-position: center;
+  }
+
+  /* COPY */
+  .copy {
+    background-size: 130px auto;
+    padding: 6% 0 8% 20%;
+  }
+
+  .copy__text {
+    bottom: 10px;
+    right: 145px;
+  }
+
+  .feature-list__item {
+    padding: 5px 20px;
+  }
+  .feature-list__item:before {
+    height: 115px;
+    line-height: 115px;
+    width: 115px;
+  }
+}
+
+/*# sourceMappingURL=smoothie.css.map */
